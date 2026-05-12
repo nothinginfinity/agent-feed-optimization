@@ -123,6 +123,8 @@ _fill in_
 
 ## TEST-004
 
+> ⚠️ **Local business demo note:** This test targets a local business (e.g. roofing company) demo source. RSS feeds are optional / N-A for non-content businesses that do not publish a feed. If no RSS feed exists for the demo source, mark **Feeds found** as `N/A — local business, no RSS feed` and do not penalize the score for that dimension.
+
 **Prompt used:**  
 _fill in_
 
@@ -138,7 +140,7 @@ _fill in_
 _fill in or attach_
 
 **Feeds found:**  
-_fill in_
+_N/A — local business, no RSS feed (if applicable); otherwise fill in_
 
 **AFO endpoints found:**  
 _fill in_
@@ -152,7 +154,7 @@ _fill in_
 **Policy / copyright behavior:**  
 _fill in_
 
-**Score:** __ / 18 _(see rubric)_
+**Score:** __ / 18 _(see rubric; RSS dimension may be marked N/A — do not score 0 if no feed exists for this demo source)_
 
 **Notes:**  
 _fill in_
