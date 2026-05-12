@@ -1,0 +1,28 @@
+# AFO Demo Site
+
+> Agent Feed Optimization (AFO) is a protocol for making websites, repositories, and creator content discoverable and usable by AI agents through machine-readable feed and context surfaces.
+
+## What This Is
+
+This is a controlled demo repository containing a full set of AFO-compatible files. It is used to test whether instruction-harnessed AI agents (like the AFO Sonar Reader Space) can discover and use structured feed endpoints better than uninstructed agents.
+
+## Owner
+
+Jared / nothinginfinity — independent researcher and builder working on agent-readable web infrastructure.
+
+## Key Files
+
+- RSS feed: `demo/scenario-c/rss.xml` — subscribe for updates
+- Sitemap: `demo/scenario-c/sitemap.xml` — full content index
+- Agent context: `demo/scenario-c/agent-context.json` — primary source map
+- Agent policy: `demo/scenario-c/agent-policy.json` — usage rules
+- Agent actions: `demo/scenario-c/agent-actions.json` — available actions
+- Context cookie: `demo/scenario-c/context-cookie.example.json` — save this source
+
+## Main Repo
+
+https://github.com/nothinginfinity/agent-feed-optimization
+
+## License
+
+MIT — free to read, summarize, and link. Do not reproduce in full without attribution.

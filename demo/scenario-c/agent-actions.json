@@ -1,0 +1,29 @@
+{
+  "afo_version": "0.1",
+  "type": "agent-actions",
+  "generated": "2026-05-12",
+  "site": "https://github.com/nothinginfinity/agent-feed-optimization",
+  "actions": [
+    {
+      "id": "subscribe_rss",
+      "label": "Subscribe to RSS feed",
+      "description": "Add the RSS feed to the user's feed reader or context-cookie list",
+      "url": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/rss.xml",
+      "method": "GET"
+    },
+    {
+      "id": "save_context_cookie",
+      "label": "Save source to context-cookie list",
+      "description": "Output the context-cookie JSON entry for the user to save",
+      "url": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/context-cookie.example.json",
+      "method": "GET"
+    },
+    {
+      "id": "read_llms_txt",
+      "label": "Read llms.txt summary",
+      "description": "Fetch and display the llms.txt file as a high-fidelity text summary",
+      "url": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/llms.txt",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "afo_version": "0.1",
+  "type": "context-cookie",
+  "saved": "<YYYY-MM-DD>",
+  "source": {
+    "name": "AFO Demo Site",
+    "url": "https://github.com/nothinginfinity/agent-feed-optimization",
+    "owner": "Jared / nothinginfinity",
+    "description": "Controlled demo repository for the Agent Feed Optimization protocol. Full set of AFO files present.",
+    "primary_topic": "AI agent feed discovery, RSS infrastructure, creator monetization"
+  },
+  "feeds": [
+    {
+      "type": "rss",
+      "url": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/rss.xml"
+    }
+  ],
+  "llms_txt": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/llms.txt",
+  "agent_context": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/agent-context.json",
+  "notes": "AFO-ready demo site. All 7 endpoints present. Use as reference implementation."
+}

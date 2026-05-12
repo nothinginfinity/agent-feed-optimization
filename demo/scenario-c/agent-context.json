@@ -1,0 +1,28 @@
+{
+  "afo_version": "0.1",
+  "type": "agent-context",
+  "generated": "2026-05-12",
+  "site": {
+    "name": "AFO Demo Site",
+    "url": "https://github.com/nothinginfinity/agent-feed-optimization",
+    "description": "Controlled demo repository for the Agent Feed Optimization protocol. Contains a full set of AFO-compatible files for testing AI agent feed discovery.",
+    "owner": "Jared / nothinginfinity",
+    "primary_topic": "AI agent feed discovery, RSS infrastructure, creator monetization",
+    "language": "en",
+    "license": "MIT"
+  },
+  "feeds": [
+    {
+      "type": "rss",
+      "url": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/rss.xml",
+      "title": "AFO Demo Site RSS Feed",
+      "description": "Updates on AFO protocol research, demos, and tooling"
+    }
+  ],
+  "sitemap": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/sitemap.xml",
+  "llms_txt": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/llms.txt",
+  "policy": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/agent-policy.json",
+  "actions": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/agent-actions.json",
+  "context_cookie_example": "https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/context-cookie.example.json",
+  "recommended_prompt": "Analyze this repository and tell me what I can subscribe to, what the owner is working on, and whether this site is AFO-ready."
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AFO Demo Site</title>
+    <link>https://github.com/nothinginfinity/agent-feed-optimization</link>
+    <description>Agent Feed Optimization — research, demos, and updates on making websites discoverable by AI agents.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/demo/scenario-c/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>AFO v0.2 Validation Scaffold Complete</title>
+      <link>https://github.com/nothinginfinity/agent-feed-optimization/blob/main/docs/results/review-memo-v0.2.md</link>
+      <description>The full v0.2 validation scaffold is built: TEST-001 through TEST-004, measurement rubric aligned to 9 dimensions / 18 points, and review memo with all blockers resolved.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://github.com/nothinginfinity/agent-feed-optimization/blob/main/docs/results/review-memo-v0.2.md</guid>
+    </item>
+
+    <item>
+      <title>G-000 AFO Sonar Reader — v0.2 Patch</title>
+      <link>https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/gists/G-000-afo-sonar-reader.md</link>
+      <description>G-000 patched with a mandatory URL-First Inspection Protocol. The agent now checks all 7 AFO file endpoints on every URL before responding.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/gists/G-000-afo-sonar-reader.md</guid>
+    </item>
+
+    <item>
+      <title>TEST-001 Redesigned — URL-Focused Comparison Test</title>
+      <link>https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/tests/TEST-001-baseline-vs-afo-sonar.md</link>
+      <description>TEST-001 redesigned around a specific URL. Both agents now analyze the same surface, making the delta a clean measure of instruction quality.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/tests/TEST-001-baseline-vs-afo-sonar.md</guid>
+    </item>
+
+  </channel>
+</rss>
