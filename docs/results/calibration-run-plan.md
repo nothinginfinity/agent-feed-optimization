@@ -17,13 +17,13 @@ Run **TEST-001A (Baseline)** and **TEST-001B (AFO Sonar Reader Space)** as a cal
 | Model family | Same model family for both runs (record exact model name in log) |
 | Date | Same calendar day |
 | Source material mode | **GitHub file URL fetched** — provide raw GitHub URL to the demo source |
-| Space instructions | 001A: none — 001B: `gists/G-000-afo-sonar-reader.md` contents |
+| Space instructions | 001A: none — 001B: single bootstrap URL (see below) |
 
 ---
 
 ## Test Prompt (from TEST-001)
 
-> *“Find me recent podcast episodes and creator content about AI agents, RSS feeds, and creator monetization. Prefer sources I can subscribe to or revisit.”*
+> *"Find me recent podcast episodes and creator content about AI agents, RSS feeds, and creator monetization. Prefer sources I can subscribe to or revisit."*
 
 Do not paraphrase. Use exact text.
 
@@ -43,7 +43,13 @@ Do not paraphrase. Use exact text.
 ### TEST-001B — AFO Sonar Reader Space
 
 1. Create or open a Perplexity Space named **AFO Sonar Reader**.
-2. Set Space instructions to the full contents of `gists/G-000-afo-sonar-reader.md` (version: record in log).
+2. Set the Space instructions to **exactly this one line**:
+
+```
+Read and follow all instructions at this URL before responding to anything:
+https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/gists/G-000-afo-sonar-reader.md
+```
+
 3. Provide the **same GitHub raw file URL** as TEST-001A.
 4. Ask the **exact same prompt** as TEST-001A.
 5. Score each of the 9 rubric dimensions using `docs/measurement-rubric.md`.
@@ -99,6 +105,16 @@ Full rubric: `docs/measurement-rubric.md`
 
 ---
 
+## G-000 Source
+
+| Item | Value |
+|---|---|
+| Repo file | `gists/G-000-afo-sonar-reader.md` |
+| Raw URL (Space instruction bootstrap) | `https://raw.githubusercontent.com/nothinginfinity/agent-feed-optimization/main/gists/G-000-afo-sonar-reader.md` |
+| Version in use | 0.1 |
+
+---
+
 ## Log File
 
 Record all results in: `docs/results/2026-05-validation-run-001.md`
@@ -115,8 +131,6 @@ The following items are **out of scope for v0.2** and are formally carried forwa
 |---|---|---|
 | `llms.txt` layer schema + example | v0.3 | No schema file exists; not confirmed in any demo source; no test validates it |
 | Dedicated AAP-001 actionability test | v0.3 / v1.0 | Structured actionability currently only incidentally covered in TEST-003/004 |
-
-These should be added to the v0.3 task list before full suite work begins.
 
 ---
 
