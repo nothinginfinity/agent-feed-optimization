@@ -1,0 +1,31 @@
+{
+  "schema": "aap-001",
+  "version": "0.1",
+  "source_name": "Example Roofing Co.",
+  "actions": [
+    {
+      "id": "book_inspection",
+      "label": "Book a free roof inspection",
+      "url": "https://example-roofing.fake/book",
+      "method": "GET"
+    },
+    {
+      "id": "get_quote",
+      "label": "Request a quote",
+      "url": "https://example-roofing.fake/quote",
+      "method": "GET"
+    },
+    {
+      "id": "contact",
+      "label": "Contact us",
+      "url": "https://example-roofing.fake/contact",
+      "method": "GET"
+    },
+    {
+      "id": "view_services",
+      "label": "View all services",
+      "url": "https://example-roofing.fake/services",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example Shirt Shop</title>
+    <link>https://example-shirt-shop.fake</link>
+    <description>Simple, quality basics. Dark palettes, clean cuts, fair prices.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 May 2026 08:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Midnight Crew Tee — Restocked</title>
+      <link>https://example-shirt-shop.fake/products/midnight-crew-tee</link>
+      <description>Our best-selling heavyweight cotton tee in midnight black. Sizes XS–3XL. $38.</description>
+      <pubDate>Mon, 12 May 2026 08:00:00 +0000</pubDate>
+      <guid>https://example-shirt-shop.fake/products/midnight-crew-tee</guid>
+    </item>
+    <item>
+      <title>Charcoal Slim Trouser — New Arrival</title>
+      <link>https://example-shirt-shop.fake/products/charcoal-slim-trouser</link>
+      <description>Slim-fit tailored trousers in charcoal grey. Italian fabric. $89.</description>
+      <pubDate>Mon, 05 May 2026 08:00:00 +0000</pubDate>
+      <guid>https://example-shirt-shop.fake/products/charcoal-slim-trouser</guid>
+    </item>
+    <item>
+      <title>Ink Bomber Jacket — Limited Run</title>
+      <link>https://example-shirt-shop.fake/products/ink-bomber-jacket</link>
+      <description>A bomber in deep navy. Ribbed cuffs, clean interior. Only 100 made. $145.</description>
+      <pubDate>Mon, 28 Apr 2026 08:00:00 +0000</pubDate>
+      <guid>https://example-shirt-shop.fake/products/ink-bomber-jacket</guid>
+    </item>
+  </channel>
+</rss>

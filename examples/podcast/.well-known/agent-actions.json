@@ -1,0 +1,36 @@
+{
+  "schema": "aap-001",
+  "version": "0.1",
+  "source_name": "Example Longform Podcast",
+  "actions": [
+    {
+      "id": "subscribe",
+      "label": "Subscribe to podcast",
+      "description": "Follow the feed to receive new episodes automatically.",
+      "url": "https://example-longform-podcast.fake/subscribe",
+      "method": "GET"
+    },
+    {
+      "id": "listen",
+      "label": "Listen to latest episode",
+      "description": "Open the most recent episode in the default podcast player.",
+      "url": "https://example-longform-podcast.fake/episodes/latest",
+      "method": "GET"
+    },
+    {
+      "id": "open_original",
+      "label": "Open original episode page",
+      "description": "View the full episode page including notes, links, and transcript.",
+      "url": "https://example-longform-podcast.fake/episodes/{episode_id}",
+      "method": "GET",
+      "parameters": [{ "name": "episode_id", "type": "string", "required": true }]
+    },
+    {
+      "id": "compare_topics",
+      "label": "Compare episodes by topic",
+      "description": "Use the agent-rss feed to compare multiple episodes on a shared theme.",
+      "url": "https://example-longform-podcast.fake/agent-rss.xml",
+      "method": "GET"
+    }
+  ]
+}

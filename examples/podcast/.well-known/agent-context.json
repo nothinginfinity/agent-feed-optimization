@@ -1,0 +1,35 @@
+{
+  "schema": "acp-001",
+  "version": "0.1",
+  "source_name": "Example Longform Podcast",
+  "source_type": "podcast",
+  "canonical_url": "https://example-longform-podcast.fake",
+  "description": "Long-form conversations on AI, health, culture, and ideas. A fictional demo source for the AFO spec.",
+  "topics": ["AI", "agentic search", "longevity", "health", "creator economy", "technology", "philosophy"],
+  "best_for": [
+    "episode discovery by topic",
+    "episode briefings and summaries",
+    "topic-based comparisons",
+    "study guides",
+    "subscription recommendations"
+  ],
+  "feeds": [
+    { "type": "rss", "url": "https://example-longform-podcast.fake/rss.xml" },
+    { "type": "agent-rss", "url": "https://example-longform-podcast.fake/agent-rss.xml" }
+  ],
+  "llms_txt": "https://example-longform-podcast.fake/llms.txt",
+  "policy_url": "https://example-longform-podcast.fake/.well-known/agent-policy.json",
+  "actions_url": "https://example-longform-podcast.fake/.well-known/agent-actions.json",
+  "recommended_prompts": [
+    "What episodes from the last 30 days are most relevant to my interests?",
+    "Summarize the latest episode in under 5 bullet points.",
+    "Compare episodes 99–101 on the theme of AI and human creativity.",
+    "Make me a 10-minute briefing on the last 3 episodes."
+  ],
+  "related_sources": [],
+  "trust_hints": {
+    "citation_required": true,
+    "official_source": true,
+    "sponsored_disclosure": "Episodes may include host-read ads; these are clearly labeled in episode descriptions."
+  }
+}

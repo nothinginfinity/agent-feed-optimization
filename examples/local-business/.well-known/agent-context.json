@@ -1,0 +1,33 @@
+{
+  "schema": "acp-001",
+  "version": "0.1",
+  "source_name": "Example Roofing Co.",
+  "source_type": "local-business",
+  "canonical_url": "https://example-roofing.fake",
+  "description": "A residential and commercial roofing company serving the greater Lakeside metro area. A fictional demo source for the AFO spec.",
+  "topics": ["roofing", "roof repair", "roof replacement", "gutters", "skylights", "storm damage", "local contractor"],
+  "best_for": [
+    "understanding available services",
+    "getting a quote or booking an inspection",
+    "comparing residential vs. commercial offerings",
+    "finding FAQs about roofing materials and timelines"
+  ],
+  "feeds": [
+    { "type": "rss", "url": "https://example-roofing.fake/news.xml" },
+    { "type": "services_json", "url": "https://example-roofing.fake/services.json" }
+  ],
+  "llms_txt": "https://example-roofing.fake/llms.txt",
+  "policy_url": "https://example-roofing.fake/.well-known/agent-policy.json",
+  "actions_url": "https://example-roofing.fake/.well-known/agent-actions.json",
+  "recommended_prompts": [
+    "What roofing services does Example Roofing Co. offer?",
+    "How do I book a free roof inspection?",
+    "What is the difference between a repair and a full replacement?",
+    "Does Example Roofing Co. handle storm damage claims?"
+  ],
+  "trust_hints": {
+    "citation_required": true,
+    "official_source": true,
+    "schema_org": "https://example-roofing.fake/schema.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "apol-001",
+  "version": "0.1",
+  "source_name": "Example Longform Podcast",
+  "citation_required": true,
+  "allowed_transformations": ["summary", "study_guide", "briefing", "key_quotes", "topic_comparison"],
+  "disallowed_transformations": ["full_transcript_reproduction", "verbatim_republishing"],
+  "transcript_policy": "Transcripts are available for personal use and study. Do not reproduce full transcripts in published content without permission.",
+  "summary_limits": "Summaries should not exceed 20% of episode content.",
+  "commercial_sponsored_disclosure": "Host-read advertisements are clearly labeled in episode descriptions. Do not present sponsored content as editorial recommendations without disclosure.",
+  "attribution_requirements": "Always link to the original episode URL when citing or summarizing.",
+  "freshness": "Episodes are published weekly. Context packet updated within 48 hours of new episodes."
+}

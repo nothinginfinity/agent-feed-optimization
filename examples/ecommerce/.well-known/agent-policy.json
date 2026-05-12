@@ -1,0 +1,10 @@
+{
+  "schema": "apol-001",
+  "version": "0.1",
+  "source_name": "Example Shirt Shop",
+  "citation_required": true,
+  "allowed_transformations": ["product_summary", "comparison", "recommendation", "gift_guide"],
+  "disallowed_transformations": ["price_misrepresentation", "availability_misrepresentation"],
+  "attribution_requirements": "Always link to the official product page when recommending or comparing.",
+  "freshness": "Product feed updated weekly. Prices and availability may change — always link to the live product page for current info."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "example-longform-podcast",
+  "label": "Example Longform Podcast",
+  "source_type": "podcast",
+  "canonical_url": "https://example-longform-podcast.fake",
+  "rss_url": "https://example-longform-podcast.fake/rss.xml",
+  "context_packet_url": "https://example-longform-podcast.fake/.well-known/agent-context.json",
+  "policy_url": "https://example-longform-podcast.fake/.well-known/agent-policy.json",
+  "actions_url": "https://example-longform-podcast.fake/.well-known/agent-actions.json",
+  "added_at": "2026-05-12T00:00:00Z",
+  "added_by": "user",
+  "user_reason": "Interested in long-form content on AI agents, health, and creator economy.",
+  "allowed_uses": ["summarize", "recommend", "link_to_original", "compare_topics", "study_guide"],
+  "citation_required": true,
+  "trust_level": "high",
+  "tags": ["podcast", "AI", "health", "creator"],
+  "notes": "Demo source for AFO spec. Use for Sonar Reader testing.",
+  "expires_at": null
+}

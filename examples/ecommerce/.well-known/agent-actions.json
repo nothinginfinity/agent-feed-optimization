@@ -1,0 +1,34 @@
+{
+  "schema": "aap-001",
+  "version": "0.1",
+  "source_name": "Example Shirt Shop",
+  "actions": [
+    {
+      "id": "view_product",
+      "label": "View product page",
+      "url": "https://example-shirt-shop.fake/products/{product_slug}",
+      "method": "GET",
+      "parameters": [{ "name": "product_slug", "type": "string", "required": true }]
+    },
+    {
+      "id": "buy",
+      "label": "Buy this product",
+      "url": "https://example-shirt-shop.fake/cart/add/{product_slug}",
+      "method": "GET",
+      "parameters": [{ "name": "product_slug", "type": "string", "required": true }]
+    },
+    {
+      "id": "compare",
+      "label": "Compare products",
+      "description": "Use the products.json feed to compare two or more items.",
+      "url": "https://example-shirt-shop.fake/products.json",
+      "method": "GET"
+    },
+    {
+      "id": "browse_new_arrivals",
+      "label": "Browse new arrivals",
+      "url": "https://example-shirt-shop.fake/collections/new",
+      "method": "GET"
+    }
+  ]
+}

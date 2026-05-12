@@ -1,0 +1,34 @@
+{
+  "schema": "acp-001",
+  "version": "0.1",
+  "source_name": "Example Shirt Shop",
+  "source_type": "ecommerce",
+  "canonical_url": "https://example-shirt-shop.fake",
+  "description": "Simple, quality basics. Dark palettes, clean cuts, fair prices. A fictional demo source for the AFO spec.",
+  "topics": ["menswear", "basics", "minimalist fashion", "dark palette", "quality essentials"],
+  "best_for": [
+    "finding specific products by style or color",
+    "comparing products",
+    "price-range filtering",
+    "discovering new arrivals",
+    "gift recommendations"
+  ],
+  "feeds": [
+    { "type": "rss", "url": "https://example-shirt-shop.fake/rss.xml" },
+    { "type": "products_json", "url": "https://example-shirt-shop.fake/products.json" }
+  ],
+  "llms_txt": "https://example-shirt-shop.fake/llms.txt",
+  "policy_url": "https://example-shirt-shop.fake/.well-known/agent-policy.json",
+  "actions_url": "https://example-shirt-shop.fake/.well-known/agent-actions.json",
+  "recommended_prompts": [
+    "Find dark-colored basics under $50.",
+    "What new items arrived this month?",
+    "Compare the Midnight Crew Tee and the Ink Bomber Jacket.",
+    "What would you recommend for someone who likes simple, dark clothing?"
+  ],
+  "trust_hints": {
+    "citation_required": true,
+    "official_source": true,
+    "sponsored_disclosure": "No sponsored content. All listings are own-brand products."
+  }
+}

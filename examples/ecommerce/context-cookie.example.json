@@ -1,0 +1,19 @@
+{
+  "id": "example-shirt-shop",
+  "label": "Example Shirt Shop",
+  "source_type": "ecommerce",
+  "canonical_url": "https://example-shirt-shop.fake",
+  "rss_url": "https://example-shirt-shop.fake/rss.xml",
+  "context_packet_url": "https://example-shirt-shop.fake/.well-known/agent-context.json",
+  "policy_url": "https://example-shirt-shop.fake/.well-known/agent-policy.json",
+  "actions_url": "https://example-shirt-shop.fake/.well-known/agent-actions.json",
+  "added_at": "2026-05-12T00:00:00Z",
+  "added_by": "user",
+  "user_reason": "Looking for simple, dark clothing under $50.",
+  "allowed_uses": ["product_summary", "comparison", "recommendation", "gift_guide", "link_to_original"],
+  "citation_required": true,
+  "trust_level": "high",
+  "tags": ["fashion", "basics", "dark", "minimal"],
+  "notes": "Demo source for AFO spec.",
+  "expires_at": null
+}

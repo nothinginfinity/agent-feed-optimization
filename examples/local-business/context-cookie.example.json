@@ -1,0 +1,18 @@
+{
+  "id": "example-roofing-co",
+  "label": "Example Roofing Co.",
+  "source_type": "local-business",
+  "canonical_url": "https://example-roofing.fake",
+  "context_packet_url": "https://example-roofing.fake/.well-known/agent-context.json",
+  "policy_url": "https://example-roofing.fake/.well-known/agent-policy.json",
+  "actions_url": "https://example-roofing.fake/.well-known/agent-actions.json",
+  "added_at": "2026-05-12T00:00:00Z",
+  "added_by": "user",
+  "user_reason": "Need roof repair after recent storm. Evaluating local contractors.",
+  "allowed_uses": ["service_summary", "comparison", "booking_guidance", "link_to_original"],
+  "citation_required": true,
+  "trust_level": "medium",
+  "tags": ["roofing", "local", "contractor", "home"],
+  "notes": "Demo source for AFO spec.",
+  "expires_at": null
+}

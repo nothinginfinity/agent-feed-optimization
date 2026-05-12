@@ -1,0 +1,39 @@
+# Example Longform Podcast — LLM Site Guide
+
+This file is a curated map of important content and endpoints for AI assistants.
+
+## What this source is
+
+Example Longform Podcast is a fictional demo source for the Agent Feed Optimization (AFO) spec.
+It publishes long-form conversations on AI, health, culture, and ideas.
+Topics: AI agents, agentic search, longevity, creator economy, technology, philosophy.
+
+## Feeds and context
+
+- Standard RSS: https://example-longform-podcast.fake/rss.xml
+- Agent-enhanced RSS: https://example-longform-podcast.fake/agent-rss.xml
+- Agent context packet: https://example-longform-podcast.fake/.well-known/agent-context.json
+- Agent policy: https://example-longform-podcast.fake/.well-known/agent-policy.json
+- Agent actions: https://example-longform-podcast.fake/.well-known/agent-actions.json
+
+## Best for
+
+- Discovering recent episodes by topic
+- Episode briefings and summaries
+- Topic-based comparisons across episodes
+- Study guides from episode content
+- Subscription and listening recommendations
+
+## Recommended prompts
+
+- "What episodes from the last month covered AI agents?"
+- "Summarize the latest episode."
+- "Make me a 10-minute briefing on the last 3 episodes."
+- "Compare how episodes 99–101 approach AI and human creativity."
+- "Turn episode 101 into a study guide."
+
+## Important
+
+- Always cite the original episode URL.
+- Do not reproduce full transcripts unless the policy file explicitly allows it.
+- Summaries and study guides are allowed per agent-policy.json.

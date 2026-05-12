@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example Longform Podcast</title>
+    <link>https://example-longform-podcast.fake</link>
+    <description>Long-form conversations on AI, health, culture, and ideas.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 May 2026 08:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Episode 101 — The Future of Agentic Search</title>
+      <link>https://example-longform-podcast.fake/episodes/101</link>
+      <description>A deep dive into how AI agents are reshaping how we find and use information on the web.</description>
+      <pubDate>Mon, 12 May 2026 08:00:00 +0000</pubDate>
+      <enclosure url="https://example-longform-podcast.fake/audio/101.mp3" length="91200000" type="audio/mpeg"/>
+      <guid>https://example-longform-podcast.fake/episodes/101</guid>
+    </item>
+    <item>
+      <title>Episode 100 — Longevity and the Quantified Self</title>
+      <link>https://example-longform-podcast.fake/episodes/100</link>
+      <description>Exploring the intersection of health data, wearables, and AI-assisted wellness coaching.</description>
+      <pubDate>Mon, 05 May 2026 08:00:00 +0000</pubDate>
+      <enclosure url="https://example-longform-podcast.fake/audio/100.mp3" length="88000000" type="audio/mpeg"/>
+      <guid>https://example-longform-podcast.fake/episodes/100</guid>
+    </item>
+    <item>
+      <title>Episode 99 — Creator Economies in 2026</title>
+      <link>https://example-longform-podcast.fake/episodes/99</link>
+      <description>What does it mean to build a sustainable audience in the age of AI-generated content?</description>
+      <pubDate>Mon, 28 Apr 2026 08:00:00 +0000</pubDate>
+      <enclosure url="https://example-longform-podcast.fake/audio/99.mp3" length="85000000" type="audio/mpeg"/>
+      <guid>https://example-longform-podcast.fake/episodes/99</guid>
+    </item>
+  </channel>
+</rss>
