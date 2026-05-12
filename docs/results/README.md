@@ -42,12 +42,13 @@ One shared file, updated after each run cycle to reflect cumulative findings.
 
 ## File Structure
 
-Each run file contains one section per test (TEST-001, TEST-002, …). Each section captures:
+Each run file contains one section per test (TEST-001A, TEST-001B, TEST-002, …). Each section captures:
 - The prompt used
 - Model / tool used
 - Mode (baseline / AFO Space / AFO demo source)
+- Source material mode (see below)
 - Raw answer
-- Screenshots
+- Screenshots (see naming convention below)
 - Feeds found
 - AFO endpoints found
 - Context-cookie suggestion quality
@@ -60,8 +61,55 @@ Scores use the rubric in [`docs/measurement-rubric.md`](../measurement-rubric.md
 
 ---
 
+## Source Material Modes
+
+Every test block must indicate which source material mode was used:
+
+| Mode | Description |
+|------|-------------|
+| **Live URL fetched** | The model fetched the source from a real, live URL during the test |
+| **GitHub file URL fetched** | The model fetched a raw GitHub file URL (e.g. `raw.githubusercontent.com/…`) |
+| **Pasted repo contents** | Repo file contents were pasted directly into the prompt |
+| **Fake / simulated domain** | A fictional or placeholder domain was used (no live URL) |
+
+This matters because source availability affects feed discoverability scores. Always record the mode so results are comparable across runs.
+
+---
+
+## Screenshot Naming Convention
+
+All screenshots go in `docs/results/screenshots/`.
+
+**Filename format:**
+```
+TEST-<id>-<mode>-<YYYY-MM-DD>.png
+```
+
+| Part | Values |
+|------|--------|
+| `<id>` | `001A`, `001B`, `002`, `003`, `004` |
+| `<mode>` | `baseline`, `afo-space`, `afo-demo` |
+| `<YYYY-MM-DD>` | Date the screenshot was taken |
+
+**Examples:**
+```
+TEST-001A-baseline-2026-05-12.png
+TEST-001B-afo-space-2026-05-12.png
+TEST-002-afo-demo-2026-05-12.png
+TEST-004-baseline-2026-05-12.png
+```
+
+If multiple screenshots are needed for one test+mode, append `-01`, `-02`, etc.:
+```
+TEST-001B-afo-space-2026-05-12-01.png
+TEST-001B-afo-space-2026-05-12-02.png
+```
+
+---
+
 ## Notes
 
 - Do not claim private LLM visibility in any results file
 - Use controlled benchmark language only
+- `N/A` is valid in any score field where a mode was not run — do not leave blank
 - Coordinate with alice-review via `mail.md` if spec or test gaps are found
