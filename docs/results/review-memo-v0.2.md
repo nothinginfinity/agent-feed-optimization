@@ -79,9 +79,9 @@ Website → RSS/feed → agent-context.json → agent-policy.json → agent-acti
 | `agent-policy.json` | ✅ `agent-policy.schema.json` | ✅ Likely present | ✅ Likely present | ✅ Likely present | ✅ Full coverage |
 | `agent-actions.json` | ✅ `agent-actions.schema.json` | ✅ Likely present | ✅ Likely present | ✅ Likely present | ✅ Full coverage |
 | `context-cookie.json` | ✅ `context-cookie.schema.json` | n/a (user-generated) | n/a | n/a | ✅ Schema exists |
-| LLM renderer (gist harness) | n/a | `G-000` required | `G-000` required | `G-000` required | ⚠️ G-000 gist not verified present in `gists/` dir |
+| LLM renderer (gist harness) | n/a | `G-000` required | `G-000` required | `G-000` required | ✅ G-000 verified present by alice-ops (MSG-007) |
 
-**Summary:** The middle layers (agent-context, policy, actions, context-cookie) are well-covered. The outer layers — `llms.txt`/website and RSS schema — have gaps. The LLM renderer (G-000 gist) needs verification.
+**Summary:** The middle layers (agent-context, policy, actions, context-cookie) are well-covered. The outer layers — `llms.txt`/website and RSS schema — have gaps. The LLM renderer (G-000 gist) is confirmed present.
 
 ---
 
@@ -91,7 +91,7 @@ Website → RSS/feed → agent-context.json → agent-policy.json → agent-acti
 TEST-001 embeds a 7-dimension /14 rubric that conflicts with the 9-dimension /18 rubric in `docs/measurement-rubric.md`. The test file should be updated to reference the canonical rubric document and remove the inline table, or the canonical rubric should be explicitly scoped to TEST-001 only. Without this fix, v0.2 results will be ambiguous.
 
 ### Fix 2 — Add rubric scoring to TEST-002, TEST-003, TEST-004 (BLOCKING)
-All three demo source tests use pass/fail checklists with no numeric score. They should reference `docs/measurement-rubric.md` and include a score row in the log template. This enables cross-test comparison and satisfies the v0.2 "publish scored rubric results" requirement.
+All three demo source tests use pass/fail checklists with no numeric score. They should reference `docs/measurement-rubric.md` and include a score row in the log template. This enables cross-test comparison and satisfies the v0.2 “publish scored rubric results” requirement.
 
 ### Fix 3 — Add `llms.txt` example to at least one demo source (HIGH)
 `llms.txt` is described as a recommended AFO layer in AFO-001 and listed in the benchmark spec, but no test validates it and no example file has been confirmed present. At minimum, the podcast demo should include an `llms.txt` so the layer can be exercised in TEST-002.
@@ -100,10 +100,68 @@ All three demo source tests use pass/fail checklists with no numeric score. They
 
 ## 5. Items Flagged for alice-ops
 
-- **Validation run template fields:** The log templates in TEST-002/003/004 are missing a `Score (/18)` field. If alice-ops's `2026-05-validation-run-001.md` template includes score fields, alice-review recommends aligning the test log templates to match — or vice versa.
+- **Validation run template fields:** The log templates in TEST-002/003/004 are missing a `Score (/18)` field. If alice-ops’s `2026-05-validation-run-001.md` template includes score fields, alice-review recommends aligning the test log templates to match — or vice versa.
 - **G-000 gist verification:** The `gists/` directory should contain `G-000-afo-sonar-reader.md`. If this file is missing or placeholder, TEST-002/003/004 cannot be run. Please confirm presence and content.
-- **Local business RSS:** TEST-004's local business demo may not have an RSS feed (a roofing company wouldn't typically have one). The RSS layer assumption in the layer model may not apply to all three demo types — worth flagging in the validation run template.
+- **Local business RSS:** TEST-004’s local business demo may not have an RSS feed (a roofing company wouldn’t typically have one). The RSS layer assumption in the layer model may not apply to all three demo types — worth flagging in the validation run template.
 
 ---
 
-_alice-review | REV-001 through REV-004 complete | 2026-05-12_
+## 6. Resolved After Alice-Ops Patch — 2026-05-12
+
+> ✅ **All items in this section are closed. Do not treat them as current blockers.**
+> Resolved via coordinated alice-ops + alice-review patches committed 2026-05-12.
+
+### Fix 1 — TEST-001 rubric mismatch ✅ RESOLVED
+- TEST-001 updated to 9-dimension / 18-point rubric aligned to `docs/measurement-rubric.md`.
+- Inline 7-dim /14 table removed.
+- Log template expanded: Tester, Space instructions version (G-000), and Model fields added.
+- Test file bumped to v0.2.
+
+### Fix 2 — Rubric scoring in TEST-002/003/004 ✅ RESOLVED
+- All three test files updated with full 9-dim /18 scoring table referencing canonical rubric.
+- Log templates expanded with Score, Tester, Model fields.
+- TEST-003 also received Endpoints found checklist field.
+- All three test files bumped to v0.2.
+
+### Fix 3 — RSS N/A for local business (TEST-004) ✅ RESOLVED
+- Prominent ⚠️ callout added to TEST-004 in validation run template (`2026-05-validation-run-001.md`).
+- `Feeds found` field pre-filled as `N/A — local business, no RSS feed (if applicable)`.
+- Score field annotated: RSS dimension may be marked N/A; do not score 0 if no feed exists.
+- Consistent callout also applied to the test file itself.
+
+### G-000 gist verification ✅ RESOLVED
+- `gists/G-000-afo-sonar-reader.md` confirmed present and complete (3,335 bytes).
+- G-001 and G-002 gists also confirmed present.
+- No action needed.
+
+### Score field alignment ✅ RESOLVED
+- `2026-05-validation-run-001.md` template confirmed using `__ / 18` with rubric reference in all 4 test sections.
+- Fully aligned with `measurement-rubric.md` (9-dim /18 scale).
+
+### Source material mode + screenshot naming ✅ ADDED (format tightening pass)
+- Source material mode checkbox block added to all test sections in validation run template.
+- Screenshot naming convention established in `docs/results/README.md`.
+- Format: `TEST-<id>-<mode>-<YYYY-MM-DD>.png`, stored in `docs/results/screenshots/`.
+
+### TEST-001 split into 001A / 001B ✅ ADDED (calibration decision)
+- TEST-001 split into:
+  - **TEST-001A** — Baseline (no Space instructions)
+  - **TEST-001B** — AFO Sonar Reader Space
+  - **TEST-001 Comparison Notes** — dimension-by-dimension delta table
+- Decision: run TEST-001A/B first as a **calibration run** before executing full suite.
+  - Same prompt, same model family, same date, same source material mode.
+  - If AFO Space reaches 12/18 and improves baseline by +6pts → proceed to TEST-002 through TEST-004.
+  - If not → patch G-000 before continuing.
+- Public claim updated: “AFO Space should reach at least 12/18 and improve baseline by at least +6 points.”
+
+---
+
+### Remaining Open Item (non-blocking, carry to v0.3)
+
+| Item | Status | Notes |
+|---|---|---|
+| `llms.txt` layer — no schema, no example | 🟡 Open — v0.3 | Not blocking v0.2 runs; recommend adding schema + podcast example before v0.3 |
+
+---
+
+_alice-review | REV-001 through REV-004 complete | resolved section added by alice 2026-05-12_
