@@ -1,5 +1,5 @@
 # TEST-002 — Podcast Feed Discovery
-_spec: afo | version: 0.1_
+_spec: afo | version: 0.2_
 
 ---
 
@@ -11,7 +11,7 @@ Test the AFO Sonar Reader against the example podcast demo source.
 
 ## Setup
 
-1. Run inside the **AFO Sonar Reader** Perplexity Space.
+1. Run inside the **AFO Sonar Reader** Perplexity Space (install `gists/G-000-afo-sonar-reader.md` as Space instructions).
 2. Provide the agent-context URL: `https://example-longform-podcast.fake/.well-known/agent-context.json`
    (or paste the contents of `examples/podcast/.well-known/agent-context.json` directly).
 
@@ -34,10 +34,35 @@ Test the AFO Sonar Reader against the example podcast demo source.
 
 ---
 
+## Scoring
+
+Score using the canonical rubric in `docs/measurement-rubric.md`.
+
+**0** = not present · **1** = partial · **2** = fully met · **Max: 18**
+
+| Dimension | Score |
+|---|---|
+| Feed endpoint discovery | /2 |
+| Canonical source preference | /2 |
+| AFO file recognition | /2 |
+| Endpoint explanation | /2 |
+| Context-cookie usefulness | /2 |
+| Citation quality | /2 |
+| Policy / copyright caution | /2 |
+| Actionability | /2 |
+| Personalization readiness | /2 |
+| **Total** | **/18** |
+
+---
+
 ## Log your results here
 
 ```
 Date:
+Tester:
+Space instructions version (G-000):
+Model:
+Score: /18
 Pass/fail per checkpoint:
 Notes:
 ```

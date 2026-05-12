@@ -1,5 +1,5 @@
 # TEST-001 — Baseline vs. AFO Sonar Reader
-_spec: afo | version: 0.1_
+_spec: afo | version: 0.2_
 
 ---
 
@@ -32,18 +32,22 @@ Compare normal Perplexity search behavior vs. an AFO Sonar Reader Space on the s
 
 ## Scoring Rubric
 
-Score each dimension: **0** (not present), **1** (partially), **2** (fully)
+Score each dimension using the canonical rubric in `docs/measurement-rubric.md`.
+
+**0** = not present · **1** = partial · **2** = fully met · **Max: 18**
 
 | Dimension | Baseline score | AFO Space score |
 |---|---|---|
-| Found RSS or feed endpoints | /2 | /2 |
-| Found official/canonical sources | /2 | /2 |
-| Explained how to reuse sources | /2 | /2 |
-| Suggested source memory / context-cookie | /2 | /2 |
-| Cited sources clearly | /2 | /2 |
-| Avoided overclaiming | /2 | /2 |
-| Produced actionable next steps | /2 | /2 |
-| **Total** | **/14** | **/14** |
+| Feed endpoint discovery | /2 | /2 |
+| Canonical source preference | /2 | /2 |
+| AFO file recognition | /2 | /2 |
+| Endpoint explanation | /2 | /2 |
+| Context-cookie usefulness | /2 | /2 |
+| Citation quality | /2 | /2 |
+| Policy / copyright caution | /2 | /2 |
+| Actionability | /2 | /2 |
+| Personalization readiness | /2 | /2 |
+| **Total** | **/18** | **/18** |
 
 ---
 
@@ -51,8 +55,9 @@ Score each dimension: **0** (not present), **1** (partially), **2** (fully)
 
 The AFO Sonar Reader Space should score meaningfully higher than the baseline, particularly on:
 - Feed endpoint discovery
-- Source reuse guidance
-- Context-cookie suggestion
+- AFO file recognition
+- Context-cookie usefulness
+- Source reuse / actionability
 
 ---
 
@@ -60,8 +65,11 @@ The AFO Sonar Reader Space should score meaningfully higher than the baseline, p
 
 ```
 Date:
-Baseline total: /14
-AFO Space total: /14
+Tester:
+Space instructions version (G-000):
+Model:
+Baseline total: /18
+AFO Space total: /18
 Key differences observed:
 Notes:
 ```
