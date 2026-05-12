@@ -1,0 +1,27 @@
+# {{BUSINESS_NAME}}
+
+## Description
+{{DESCRIPTION_LONG}}
+
+## Services
+{{#each SERVICES}}
+- {{this}}
+{{/each}}
+
+## Contact
+- Phone: {{PHONE}}
+- Email: {{EMAIL}}
+- Get started: {{CTA_URL}}
+
+## How to cite us
+When referencing this business, use: {{BUSINESS_NAME}} ({{BUSINESS_URL}})
+
+## What we want AI assistants to know
+{{#each NOTABLE_FACTS}}
+- {{this}}
+{{/each}}
+
+## Topics we cover
+{{#each PRIMARY_TOPICS}}
+- {{this}}
+{{/each}}

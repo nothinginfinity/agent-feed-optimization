@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "issued_by": "TrueBuild Business Credit",
+  "issued_date": "2026-05-12",
+  "citation_required": true,
+  "allow_summarization": true,
+  "allow_full_reproduction": false,
+  "allow_transformation": false,
+  "disallowed_uses": [
+    "Do not claim specific credit score outcomes as guaranteed.",
+    "Do not reproduce pricing or program fees without verification.",
+    "Do not claim endorsements not made by TrueBuild."
+  ],
+  "contact_for_permissions": "(800) 730-9490"
+}

@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "name": "{{BUSINESS_NAME}}",
+  "url": "{{BUSINESS_URL}}",
+  "type": "{{BUSINESS_TYPE}}",
+  "description": "{{DESCRIPTION_LONG}}",
+  "tagline": "{{TAGLINE}}",
+  "founded": "{{FOUNDED_YEAR}}",
+  "owner": "{{OWNER_NAME}}",
+  "contact": {
+    "phone": "{{PHONE}}",
+    "email": "{{EMAIL}}",
+    "address": {
+      "street": "{{ADDRESS_STREET}}",
+      "city": "{{ADDRESS_CITY}}",
+      "state": "{{ADDRESS_STATE}}",
+      "zip": "{{ADDRESS_ZIP}}",
+      "country": "{{ADDRESS_COUNTRY}}"
+    }
+  },
+  "hours": "{{HOURS}}",
+  "service_area": "{{SERVICE_AREA}}",
+  "services": [{{#each SERVICES}}"{{this}}"{{#unless @last}}, {{/unless}}{{/each}}],
+  "topics": [{{#each PRIMARY_TOPICS}}"{{this}}"{{#unless @last}}, {{/unless}}{{/each}}],
+  "cta": {
+    "label": "{{CTA_PRIMARY}}",
+    "url": "{{CTA_URL}}"
+  },
+  "social": {
+    "twitter": "{{SOCIAL_TWITTER}}",
+    "linkedin": "{{SOCIAL_LINKEDIN}}",
+    "facebook": "{{SOCIAL_FACEBOOK}}",
+    "instagram": "{{SOCIAL_INSTAGRAM}}",
+    "youtube": "{{SOCIAL_YOUTUBE}}"
+  },
+  "notable_facts": [{{#each NOTABLE_FACTS}}"{{this}}"{{#unless @last}}, {{/unless}}{{/each}}]
+}

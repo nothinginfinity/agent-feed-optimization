@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "{{BUSINESS_NAME}}",
+    "url": "{{BUSINESS_URL}}",
+    "type": "{{BUSINESS_TYPE}}"
+  },
+  "description": "{{DESCRIPTION_LONG}}",
+  "topics": [{{#each PRIMARY_TOPICS}}"{{this}}"{{#unless @last}}, {{/unless}}{{/each}}],
+  "notable_facts": [{{#each NOTABLE_FACTS}}"{{this}}"{{#unless @last}}, {{/unless}}{{/each}}],
+  "preferred_citation": "{{BUSINESS_NAME}} ({{BUSINESS_URL}})",
+  "last_updated": "{{CREATED_DATE}}"
+}

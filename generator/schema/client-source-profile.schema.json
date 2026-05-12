@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/nothinginfinity/agent-feed-optimization/generator/schema/client-source-profile.schema.json",
+  "title": "ClientSourceProfile",
+  "description": "Structured client data collected from the audit report. Used as the single source of truth for all 7 AFO file generators. Unknown fields MUST be set to the string 'TODO_CLIENT_CONFIRM' — never leave blank, never invent.",
+  "type": "object",
+  "required": ["meta", "business", "afo_audit"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["profile_version", "created_date", "audited_url", "auditor"],
+      "properties": {
+        "profile_version": { "type": "string", "example": "1.0" },
+        "created_date": { "type": "string", "format": "date", "example": "2026-05-12" },
+        "audited_url": { "type": "string", "format": "uri" },
+        "auditor": { "type": "string", "example": "Jared / AFO Audit Agent G-000 v0.3" },
+        "afo_score": { "type": "integer", "minimum": 0, "maximum": 18 },
+        "readiness_tier": { "type": "string", "enum": ["AI-Ready", "Partial", "Minimal", "Not Visible"] }
+      }
+    },
+    "business": {
+      "type": "object",
+      "required": ["name", "url", "type"],
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "type": { "type": "string", "example": "local service / creator / ecommerce / B2B / SaaS" },
+        "tagline": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "description_short": { "type": "string", "description": "1-2 sentences. Use only verifiable facts from the audit.", "default": "TODO_CLIENT_CONFIRM" },
+        "description_long": { "type": "string", "description": "3-5 sentences for llms.txt and agent-context.", "default": "TODO_CLIENT_CONFIRM" },
+        "founded_year": { "type": ["integer", "string"], "default": "TODO_CLIENT_CONFIRM" },
+        "owner_name": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "phone": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "email": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "address": {
+          "type": "object",
+          "properties": {
+            "street": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "city": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "state": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "zip": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "country": { "type": "string", "default": "US" }
+          }
+        },
+        "hours": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "service_area": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "services": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["TODO_CLIENT_CONFIRM"]
+        },
+        "primary_topics": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["TODO_CLIENT_CONFIRM"]
+        },
+        "social": {
+          "type": "object",
+          "properties": {
+            "twitter": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "linkedin": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "facebook": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "instagram": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+            "youtube": { "type": "string", "default": "TODO_CLIENT_CONFIRM" }
+          }
+        },
+        "cta_primary": { "type": "string", "description": "Primary call to action label.", "default": "TODO_CLIENT_CONFIRM" },
+        "cta_url": { "type": "string", "format": "uri", "default": "TODO_CLIENT_CONFIRM" },
+        "notable_facts": {
+          "type": "array",
+          "description": "Verifiable facts from the site: years in business, clients served, awards, etc.",
+          "items": { "type": "string" },
+          "default": ["TODO_CLIENT_CONFIRM"]
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "description": "Existing content surfaces found during audit.",
+      "properties": {
+        "blog_url": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "feed_url": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "sitemap_url": { "type": "string", "default": "TODO_CLIENT_CONFIRM" },
+        "key_pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "default": []
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "description": "Client's preferences for AI agent usage of their content.",
+      "properties": {
+        "citation_required": { "type": "boolean", "default": true },
+        "allow_summarization": { "type": "boolean", "default": true },
+        "allow_full_reproduction": { "type": "boolean", "default": false },
+        "allow_transformation": { "type": "boolean", "default": false },
+        "disallowed_uses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["Do not claim endorsements not made by the business owner.", "Do not reproduce pricing without verification."]
+        },
+        "contact_for_permissions": { "type": "string", "default": "TODO_CLIENT_CONFIRM" }
+      }
+    },
+    "afo_audit": {
+      "type": "object",
+      "required": ["score", "endpoints"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 18 },
+        "endpoints": {
+          "type": "object",
+          "properties": {
+            "rss": { "type": "string", "enum": ["found", "missing", "partial"] },
+            "sitemap": { "type": "string", "enum": ["found", "missing"] },
+            "llms_txt": { "type": "string", "enum": ["found", "missing"] },
+            "agent_context": { "type": "string", "enum": ["found", "missing"] },
+            "agent_policy": { "type": "string", "enum": ["found", "missing"] },
+            "agent_actions": { "type": "string", "enum": ["found", "missing"] },
+            "context_cookie": { "type": "string", "enum": ["found", "missing"] }
+          }
+        }
+      }
+    }
+  }
+}

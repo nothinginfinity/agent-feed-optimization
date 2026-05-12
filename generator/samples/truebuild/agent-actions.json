@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "issued_by": "TrueBuild Business Credit",
+  "actions": [
+    {
+      "id": "free_credit_analysis",
+      "label": "Get Your Free Business Credit Analysis",
+      "description": "Start a free business credit analysis with TrueBuild to find out where your business credit stands and what steps to take next.",
+      "type": "link",
+      "url": "TODO_CLIENT_CONFIRM",
+      "method": "GET"
+    },
+    {
+      "id": "contact_phone",
+      "label": "Call TrueBuild Business Credit",
+      "description": "Call TrueBuild directly to speak with a business credit advisor.",
+      "type": "phone",
+      "url": "tel:8007309490",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "issued_by": "{{BUSINESS_NAME}}",
+  "actions": [
+    {
+      "id": "primary_cta",
+      "label": "{{CTA_PRIMARY}}",
+      "description": "Start the primary call to action for {{BUSINESS_NAME}}.",
+      "type": "link",
+      "url": "{{CTA_URL}}",
+      "method": "GET"
+    },
+    {
+      "id": "contact_phone",
+      "label": "Call {{BUSINESS_NAME}}",
+      "description": "Call {{BUSINESS_NAME}} directly by phone.",
+      "type": "phone",
+      "url": "tel:{{PHONE_DIGITS_ONLY}}",
+      "method": "GET"
+    }
+  ]
+}

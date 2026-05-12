@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "issued_by": "{{BUSINESS_NAME}}",
+  "issued_date": "{{CREATED_DATE}}",
+  "citation_required": {{CITATION_REQUIRED}},
+  "allow_summarization": {{ALLOW_SUMMARIZATION}},
+  "allow_full_reproduction": {{ALLOW_FULL_REPRODUCTION}},
+  "allow_transformation": {{ALLOW_TRANSFORMATION}},
+  "disallowed_uses": [{{#each DISALLOWED_USES}}"{{this}}"{{#unless @last}}, {{/unless}}{{/each}}],
+  "contact_for_permissions": "{{CONTACT_FOR_PERMISSIONS}}"
+}
