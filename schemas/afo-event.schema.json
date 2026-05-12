@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agentfeed.org/schemas/afo-event.schema.json",
+  "title": "AFO Event",
+  "description": "AMET-001: Individual tracking event for AFO analytics.",
+  "type": "object",
+  "required": ["event_id", "event_type", "source_id", "timestamp"],
+  "properties": {
+    "event_id": { "type": "string" },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "afo_url_read", "agent_context_read", "agent_policy_read", "agent_actions_read",
+        "enhanced_rss_read", "likely_ai_crawler_read", "tracked_action_click",
+        "context_cookie_added", "context_cookie_removed", "benchmark_prompt_run",
+        "benchmark_source_appearance", "benchmark_competitor_appearance",
+        "afo_file_updated", "recommendation_generated"
+      ]
+    },
+    "source_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "url_path": { "type": "string" },
+    "referrer": { "type": "string" },
+    "user_agent_class": {
+      "type": "string",
+      "enum": ["browser", "likely_ai_agent", "known_ai_crawler", "search_bot", "unknown"]
+    },
+    "session_hash": { "type": "string", "description": "Anonymized session identifier" },
+    "metadata": { "type": "object" }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agentfeed.org/schemas/agent-context.schema.json",
+  "title": "Agent Context Packet",
+  "description": "ACP-001: Describes what a website or feed is, what it is best for, and how LLMs should interact with it.",
+  "type": "object",
+  "required": ["schema", "version", "source_name", "source_type", "canonical_url"],
+  "properties": {
+    "schema": { "type": "string", "const": "ACP-001" },
+    "version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date" },
+    "source_name": { "type": "string" },
+    "source_type": {
+      "type": "string",
+      "enum": ["podcast", "video-channel", "blog", "news", "ecommerce", "local-business", "software", "creator", "dataset", "other"]
+    },
+    "canonical_url": { "type": "string", "format": "uri" },
+    "description": { "type": "string" },
+    "language": { "type": "string" },
+    "region": { "type": "string" },
+    "topics": { "type": "array", "items": { "type": "string" } },
+    "best_for": { "type": "array", "items": { "type": "string" } },
+    "not_for": { "type": "array", "items": { "type": "string" } },
+    "rss_feeds": { "type": "array", "items": { "type": "string", "format": "uri" } },
+    "json_feed": { "type": "string", "format": "uri" },
+    "sitemap": { "type": "string", "format": "uri" },
+    "llms_txt": { "type": "string", "format": "uri" },
+    "recommended_prompts": { "type": "array", "items": { "type": "string" } },
+    "llm_instructions": { "type": "object" },
+    "related_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "type": { "type": "string" }
+        }
+      }
+    },
+    "policy_url": { "type": "string", "format": "uri" },
+    "actions_url": { "type": "string", "format": "uri" },
+    "citation_hint": { "type": "string" },
+    "context_cookie": {
+      "type": "object",
+      "properties": {
+        "label": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

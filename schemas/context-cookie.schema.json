@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agentfeed.org/schemas/context-cookie.schema.json",
+  "title": "Context Cookie",
+  "description": "ACC-001: User-controlled source memory for LLM conversations.",
+  "type": "object",
+  "required": ["schema", "version", "sources"],
+  "properties": {
+    "schema": { "type": "string", "const": "ACC-001" },
+    "version": { "type": "string" },
+    "updated_at": { "type": "string", "format": "date" },
+    "owner": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "source_type", "added_at", "trust_level"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "source_type": { "type": "string" },
+          "canonical_url": { "type": "string", "format": "uri" },
+          "rss_url": { "type": "string", "format": "uri" },
+          "context_packet_url": { "type": "string", "format": "uri" },
+          "policy_url": { "type": "string", "format": "uri" },
+          "actions_url": { "type": "string", "format": "uri" },
+          "added_at": { "type": "string", "format": "date" },
+          "added_by": { "type": "string" },
+          "user_reason": { "type": "string" },
+          "allowed_uses": { "type": "array", "items": { "type": "string" } },
+          "citation_required": { "type": "boolean" },
+          "trust_level": { "type": "string", "enum": ["user-approved", "inferred", "system"] },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "notes": { "type": "string" },
+          "expires_at": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

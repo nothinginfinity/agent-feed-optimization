@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agentfeed.org/schemas/agent-policy.schema.json",
+  "title": "Agent Policy",
+  "description": "APOL-001: Defines how LLMs and agents may use the content from a source.",
+  "type": "object",
+  "required": ["schema", "version", "source_name", "canonical_url"],
+  "properties": {
+    "schema": { "type": "string", "const": "APOL-001" },
+    "version": { "type": "string" },
+    "source_name": { "type": "string" },
+    "canonical_url": { "type": "string", "format": "uri" },
+    "updated_at": { "type": "string", "format": "date" },
+    "citation_required": { "type": "boolean" },
+    "citation_format": { "type": "string" },
+    "attribution_required": { "type": "boolean" },
+    "allowed_transformations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["summary", "study_guide", "briefing", "recommendation", "comparison", "translation", "full_reproduction", "reposting", "commercial_reuse"]
+      }
+    },
+    "disallowed_transformations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "full_transcript_allowed": { "type": "boolean" },
+    "summary_max_length": { "type": "integer" },
+    "excerpt_max_length": { "type": "integer" },
+    "contains_sponsored_content": { "type": "boolean" },
+    "sponsored_items_labeled": { "type": "boolean" },
+    "commercial_use_allowed": { "type": "boolean" },
+    "affiliate_disclosure_required": { "type": "boolean" },
+    "freshness_hours": { "type": "integer" },
+    "expires_at": { "type": ["string", "null"] },
+    "notes": { "type": "string" }
+  }
+}

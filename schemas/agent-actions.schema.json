@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agentfeed.org/schemas/agent-actions.schema.json",
+  "title": "Agent Actions",
+  "description": "AAP-001: Defines what actions a user can take when interacting with a source through an LLM.",
+  "type": "object",
+  "required": ["schema", "version", "source_name", "actions"],
+  "properties": {
+    "schema": { "type": "string", "const": "AAP-001" },
+    "version": { "type": "string" },
+    "source_name": { "type": "string" },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action_id", "action_type", "label", "url"],
+        "properties": {
+          "action_id": { "type": "string" },
+          "action_type": {
+            "type": "string",
+            "enum": ["listen", "watch", "subscribe", "buy", "book", "contact", "download", "compare", "open_original", "ask_creator", "join_membership", "emergency_contact"]
+          },
+          "label": { "type": "string" },
+          "description": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "method": { "type": "string", "enum": ["GET", "POST"], "default": "GET" },
+          "requires_auth": { "type": "boolean", "default": false },
+          "tracked_url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

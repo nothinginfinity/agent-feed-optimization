@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://agentfeed.org/schemas/afo-metrics.schema.json",
+  "title": "AFO Metrics Report",
+  "description": "AMET-001: Weekly AI search visibility report for an AFO-enabled source.",
+  "type": "object",
+  "required": ["schema", "source_id", "report_date", "period", "summary"],
+  "properties": {
+    "schema": { "type": "string", "const": "AFO-METRICS-001" },
+    "source_id": { "type": "string" },
+    "source_name": { "type": "string" },
+    "report_date": { "type": "string", "format": "date" },
+    "period": {
+      "type": "object",
+      "properties": {
+        "start": { "type": "string", "format": "date" },
+        "end": { "type": "string", "format": "date" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "afo_url_reads": { "type": "integer" },
+        "likely_ai_reads": { "type": "integer" },
+        "context_cookie_adds": { "type": "integer" },
+        "tracked_action_clicks": { "type": "integer" },
+        "benchmark_prompts_run": { "type": "integer" },
+        "benchmark_appearances": { "type": "integer" },
+        "benchmark_visibility_rate": { "type": "number" },
+        "afo_score": { "type": "integer" }
+      }
+    },
+    "top_referrers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": { "type": "string" },
+          "reads": { "type": "integer" }
+        }
+      }
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_name": { "type": "string" },
+          "benchmark_visibility_rate": { "type": "number" },
+          "afo_score": { "type": "integer" }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "priority": { "type": "string", "enum": ["high", "medium", "low"] },
+          "issue": { "type": "string" },
+          "impact": { "type": "string" },
+          "fix": { "type": "string" }
+        }
+      }
+    },
+    "version_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "version": { "type": "string" },
+          "change": { "type": "string" },
+          "observed_effect": { "type": "string" }
+        }
+      }
+    }
+  }
+}
