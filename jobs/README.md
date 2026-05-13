@@ -34,28 +34,41 @@ draft → review → approved → delivered
 | `approved` | Jared has reviewed and signed off; files cleared for delivery | Jared only |
 | `delivered` | Files have been sent/deployed to client | Jared only |
 
-> **Policy:** Only Jared may promote a job from `approved` to `delivered`, or from `review` to `approved`. The agent writes `draft` only.
+> **Policy:** Only Jared may promote a job from `review` to `approved`, or from `approved` to `delivered`. The agent writes `draft` only.
+
+---
+
+## Regeneration Guard
+
+> **G-001 must read `job.json` before writing any files.** If `status === "delivered"`, the generator must abort and log a warning to the outbox. A delivered job must never be overwritten.
 
 ---
 
 ## Files in Each Job Folder
 
-Every completed job folder contains:
+### Client ZIP (10 files delivered to client)
 
 | File | Description |
 |------|-------------|
 | `agent-context.json` | AFO agent context layer |
 | `agent-actions.json` | AFO agent actions layer |
-| `context-cookie.md` | AFO context-cookie entry |
+| `agent-policy.json` | AFO content policy (machine-readable, installs to `/.well-known/`) |
+| `policy.md` | Plain-English content policy companion — **for client reference only, not installed** |
+| `context-cookie.json` | AFO context-cookie (machine-readable, installs to `/.well-known/`) |
+| `context-cookie.md` | Plain-English context-cookie explanation — **for client reference only, not installed** |
 | `llms.txt` | LLM-readable site summary |
-| `policy.md` | AFO content policy |
-| `rss.xml` | RSS feed (if applicable) |
+| `rss.xml` | RSS feed (if `has_rss: true`; otherwise marked N/A in `job.json`) |
 | `sitemap-agent.xml` | Agent-optimized sitemap |
-| `job.json` | Job status file (see schema below) |
-| `README-review.md` | Internal ops review checklist |
 | `README-install.md` | Client-facing install instructions |
 
-> **Note:** RSS (`rss.xml`) is optional for non-content businesses (e.g. local service companies with no feed). Mark as N/A in `job.json` if not applicable.
+> **Note:** `context-cookie.schema.json` is a spec/validation schema — it is **never** included in the client ZIP and never installed on a client site.
+
+### Internal job folder only (not in client ZIP)
+
+| File | Description |
+|------|-------------|
+| `job.json` | Job status file (draft → delivered lifecycle) |
+| `README-review.md` | Internal ops review checklist — do not share with client |
 
 ---
 
@@ -72,3 +85,9 @@ The `_template/` folder contains blank starter files for new jobs:
 ## Outbox
 
 When G-001 completes a job, it appends an entry to `spaces/generator/outbox.md` in `nothinginfinity/repo-copilot`. This signals to Jared that a job is ready for review.
+
+---
+
+## Repo Split Note
+
+Job folders currently live in `agent-feed-optimization/jobs/` for development and live testing. Once first live client tests pass, real client job folders will move to a separate private `afo-client-jobs` repo. This repo will remain for demo and test jobs.

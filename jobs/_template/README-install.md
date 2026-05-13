@@ -10,32 +10,43 @@ Welcome! This package contains your Agent Feed Optimization (AFO) files — a se
 
 | File | What it does |
 |------|--------------|
-| `agent-context.json` | Tells AI agents who you are, what you do, and where to find your content |
-| `agent-actions.json` | Lists the specific actions an AI can take on your behalf (e.g. book a call, subscribe to podcast) |
-| `context-cookie.md` | A ready-to-use memory snippet AI assistants can store to remember your business |
 | `llms.txt` | A plain-text summary of your site optimized for large language models |
-| `policy.md` | Your content usage policy — tells AI tools what they can and can't do with your content |
-| `rss.xml` | Your RSS feed (if applicable) — helps AI tools follow your latest content |
+| `agent-context.json` | Tells AI agents who you are, what you do, and where to find your content |
+| `agent-actions.json` | Lists the specific actions an AI can suggest on your behalf (e.g. book a call, subscribe) |
+| `agent-policy.json` | Installs to `/.well-known/agent-policy.json` — tells AI systems your content rules in machine-readable format |
+| `policy.md` | A plain-English summary of your content policy — for your reference, does not need to be installed |
+| `context-cookie.json` | Installs to `/.well-known/context-cookie.json` — gives AI systems a structured snapshot of your business identity |
+| `context-cookie.md` | A plain-English explanation of what the context cookie does — for your reference, does not need to be installed |
+| `rss.xml` | Your RSS feed — helps AI tools follow your latest content (included only if applicable) |
 | `sitemap-agent.xml` | An agent-optimized sitemap that helps AI crawlers find your key pages |
+| `README-install.md` | This file |
+
+> **Note:** Files ending in `.md` are plain-English companions for your reference. Only the `.json` and `.xml` files need to be installed on your website.
 
 ---
 
 ## How to Install Each File
 
+### Files to upload to your `/.well-known/` directory
+
+Create a folder called `.well-known` in the root of your website and upload:
+
+- `agent-context.json` → `https://yoursite.com/.well-known/agent-context.json`
+- `agent-actions.json` → `https://yoursite.com/.well-known/agent-actions.json`
+- `agent-policy.json` → `https://yoursite.com/.well-known/agent-policy.json`
+- `context-cookie.json` → `https://yoursite.com/.well-known/context-cookie.json`
+
 ### Files to upload to your website root
 
-Upload the following files to the **root directory** of your website (the same folder as your homepage):
-
-- `agent-context.json` → `https://yoursite.com/agent-context.json`
-- `agent-actions.json` → `https://yoursite.com/agent-actions.json`
 - `llms.txt` → `https://yoursite.com/llms.txt`
-- `policy.md` → `https://yoursite.com/policy.md`
 - `sitemap-agent.xml` → `https://yoursite.com/sitemap-agent.xml`
-- `rss.xml` → `https://yoursite.com/rss.xml` _(if included)_
+- `rss.xml` → `https://yoursite.com/rss.xml` _(if included in your package)_
 
-### context-cookie.md
+### Files that do not need to be installed
 
-This file does not go on your website. It is a snippet you (or your team) can paste into an AI assistant's memory or custom instructions to give it context about your business.
+- `policy.md` — for your reference only
+- `context-cookie.md` — for your reference only
+- `README-install.md` — this guide
 
 ---
 
@@ -43,9 +54,10 @@ This file does not go on your website. It is a snippet you (or your team) can pa
 
 After uploading, confirm each file is publicly accessible by visiting its URL in a browser:
 
-1. Go to `https://yoursite.com/agent-context.json` — you should see JSON data
-2. Go to `https://yoursite.com/llms.txt` — you should see plain text
-3. Go to `https://yoursite.com/policy.md` — you should see your policy text
+1. `https://yoursite.com/.well-known/agent-context.json` — you should see JSON data
+2. `https://yoursite.com/.well-known/agent-policy.json` — you should see JSON data
+3. `https://yoursite.com/llms.txt` — you should see plain text
+4. `https://yoursite.com/sitemap-agent.xml` — you should see XML data
 
 If any file returns a 404 error, check that it was uploaded to the correct folder.
 
@@ -55,6 +67,6 @@ If any file returns a 404 error, check that it was uploaded to the correct folde
 
 If you have questions about installing these files or need help verifying the setup, contact:
 
-**Name:** _fill in_  
-**Email:** _fill in_  
-**Response time:** _fill in_
+**Name:** {contact_name}  
+**Email:** {contact_email}  
+**Response time:** Within 1 business day

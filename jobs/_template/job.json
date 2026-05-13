@@ -4,9 +4,27 @@
   "client_url": "",
   "created_at": "",
   "status": "draft",
+  "_status_allowed_values": ["draft", "review", "approved", "delivered"],
   "intake_completed": false,
+  "intake_data": {},
+  "files_expected": [
+    "llms.txt",
+    "agent-context.json",
+    "agent-actions.json",
+    "agent-policy.json",
+    "policy.md",
+    "context-cookie.json",
+    "context-cookie.md",
+    "rss.xml",
+    "sitemap-agent.xml",
+    "README-install.md"
+  ],
   "files_generated": [],
+  "rss_status": "pending",
+  "_rss_status_allowed": ["included", "not-applicable", "pending"],
   "review_notes": "",
+  "reviewed_at": null,
   "approved_at": null,
-  "delivered_at": null
+  "delivered_at": null,
+  "_generation_guard": "If status is delivered, generator must abort. Never overwrite a delivered job."
 }
