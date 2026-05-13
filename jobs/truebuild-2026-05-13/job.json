@@ -3,7 +3,7 @@
   "client_slug": "truebuild",
   "client_url": "https://info.truebuild.com",
   "created_at": "2026-05-13T09:25:00Z",
-  "status": "draft",
+  "status": "approved",
   "_status_allowed_values": ["draft", "review", "approved", "delivered"],
   "intake_completed": true,
   "intake_data": {
@@ -63,9 +63,9 @@
   ],
   "rss_status": "not-applicable",
   "_rss_status_allowed": ["included", "not-applicable", "pending"],
-  "review_notes": "First controlled demo job. All 10 files generated from TrueBuild audit report data. rss.xml included as placeholder stub (has_rss: false) to support future activation. Reviewer: verify all 10 files present, check positioning language, confirm CTA URL is correct before approving.",
-  "reviewed_at": null,
-  "approved_at": null,
+  "review_notes": "First controlled demo job. All 10 files generated from TrueBuild audit report data. Full review passed 2026-05-13 — all 4 sections clean, zero flags. Approved by Jared 2026-05-13T09:33:00Z.",
+  "reviewed_at": "2026-05-13T09:33:00Z",
+  "approved_at": "2026-05-13T09:33:00Z",
   "delivered_at": null,
   "_generation_guard": "If status is delivered, generator must abort. Never overwrite a delivered job."
 }
