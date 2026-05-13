@@ -1,0 +1,12 @@
+{
+  "job_id": "",
+  "client_slug": "",
+  "client_url": "",
+  "created_at": "",
+  "status": "draft",
+  "intake_completed": false,
+  "files_generated": [],
+  "review_notes": "",
+  "approved_at": null,
+  "delivered_at": null
+}
