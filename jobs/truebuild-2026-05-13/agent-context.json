@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TrueBuild Business Credit",
+  "url": "https://info.truebuild.com",
+  "description": "TrueBuild Business Credit helps small businesses build corporate credit through a structured 7-step program. The program typically takes 90\u2013120 days and has served over 48,000 businesses since 2001.",
+  "foundingDate": "2001",
+  "slogan": "The Internet\u2019s longest-standing business credit building program.",
+  "industry": "Financial Services / Business Credit",
+  "areaServed": "United States",
+  "audience": "Small business owners seeking to build corporate credit separate from personal credit",
+  "telephone": "(800) 730-9490",
+  "email": "support@truebuild.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "(800) 730-9490",
+    "contactType": "customer service",
+    "availableLanguage": "English"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Business Credit Building Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "7-Step Business Credit Building Program",
+        "description": "A structured coaching program that takes small businesses through 7 steps to build corporate credit. Typical timeline: 90\u2013120 days."
+      },
+      {
+        "@type": "Offer",
+        "name": "Free Business Credit Analysis",
+        "description": "A complimentary review of your current business credit standing with a roadmap for improvement."
+      },
+      {
+        "@type": "Offer",
+        "name": "Corporate Credit Coaching",
+        "description": "One-on-one guidance through the business credit building process."
+      },
+      {
+        "@type": "Offer",
+        "name": "Business Credit Monitoring",
+        "description": "Ongoing monitoring of business credit health and profile."
+      }
+    ]
+  },
+  "numberOfEmployees": null,
+  "knowsAbout": [
+    "Business credit building",
+    "Corporate credit",
+    "Small business financing",
+    "Business credit bureaus",
+    "Fundable business identity"
+  ],
+  "sameAs": [
+    "https://info.truebuild.com"
+  ]
+}

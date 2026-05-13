@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:ai="https://afo-protocol.org/sitemap-agent/1.0">
+
+  <url>
+    <loc>https://info.truebuild.com</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <ai:description>TrueBuild Business Credit homepage. Overview of the 7-step business credit building program, free analysis offer, and contact information.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://info.truebuild.com/program</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:description>The TrueBuild 7-step business credit building program. Details on the process, timeline (90–120 days), and what clients receive.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://info.truebuild.com/about</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <ai:description>About TrueBuild Business Credit. Company history since 2001, 48,000+ clients served, team background.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://info.truebuild.com/testimonials</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <ai:description>Client success stories and testimonials from small business owners who built corporate credit through TrueBuild.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://info.truebuild.com/contact</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <ai:description>Contact TrueBuild Business Credit. Phone: (800) 730-9490. Email: support@truebuild.com.</ai:description>
+  </url>
+
+</urlset>

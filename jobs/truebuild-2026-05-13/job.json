@@ -1,0 +1,71 @@
+{
+  "job_id": "truebuild-2026-05-13",
+  "client_slug": "truebuild",
+  "client_url": "https://info.truebuild.com",
+  "created_at": "2026-05-13T09:25:00Z",
+  "status": "draft",
+  "_status_allowed_values": ["draft", "review", "approved", "delivered"],
+  "intake_completed": true,
+  "intake_data": {
+    "business_name": "TrueBuild Business Credit",
+    "client_url": "https://info.truebuild.com",
+    "business_type": "B2B financial services / small business credit building",
+    "business_description": "TrueBuild Business Credit helps small businesses build corporate credit through a structured 7-step program. The program typically takes 90\u2013120 days and has served over 48,000 businesses since 2001.",
+    "phone": "(800) 730-9490",
+    "founding_year": 2001,
+    "clients_served": "48,000+",
+    "services": [
+      "Business credit building program (7-step)",
+      "Corporate credit coaching",
+      "Free business credit analysis",
+      "Business credit monitoring"
+    ],
+    "primary_cta": "Start your free business credit analysis",
+    "cta_url": "https://info.truebuild.com",
+    "content_policy_notes": "Do not overstate timelines or guarantee specific scores. Attribution required for all citations. Do not represent TrueBuild as a lender.",
+    "positioning_statement": "The Internet\u2019s longest-standing business credit building program \u2014 helping small businesses build corporate credit since 2001.",
+    "has_rss": false,
+    "key_pages": [
+      "https://info.truebuild.com",
+      "https://info.truebuild.com/program",
+      "https://info.truebuild.com/about",
+      "https://info.truebuild.com/contact",
+      "https://info.truebuild.com/testimonials"
+    ],
+    "contact_email": "support@truebuild.com",
+    "contact_name": "TrueBuild Support Team",
+    "target_audience": "Small business owners in the United States seeking to establish or build corporate credit separate from personal credit",
+    "industry_category": "Financial Services / Business Credit"
+  },
+  "files_expected": [
+    "llms.txt",
+    "agent-context.json",
+    "agent-actions.json",
+    "agent-policy.json",
+    "policy.md",
+    "context-cookie.json",
+    "context-cookie.md",
+    "rss.xml",
+    "sitemap-agent.xml",
+    "README-install.md"
+  ],
+  "files_generated": [
+    "llms.txt",
+    "agent-context.json",
+    "agent-actions.json",
+    "agent-policy.json",
+    "policy.md",
+    "context-cookie.json",
+    "context-cookie.md",
+    "rss.xml",
+    "sitemap-agent.xml",
+    "README-install.md"
+  ],
+  "rss_status": "not-applicable",
+  "_rss_status_allowed": ["included", "not-applicable", "pending"],
+  "review_notes": "First controlled demo job. All 10 files generated from TrueBuild audit report data. rss.xml included as placeholder stub (has_rss: false) to support future activation. Reviewer: verify all 10 files present, check positioning language, confirm CTA URL is correct before approving.",
+  "reviewed_at": null,
+  "approved_at": null,
+  "delivered_at": null,
+  "_generation_guard": "If status is delivered, generator must abort. Never overwrite a delivered job."
+}

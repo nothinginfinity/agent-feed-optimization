@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  TrueBuild Business Credit — RSS Feed Stub
+  Status: not-applicable (has_rss: false at intake)
+  This stub file is included so the install path is reserved.
+  To activate: replace this stub with a real feed generated from
+  TrueBuild content (blog posts, success stories, program updates).
+  Install path: https://info.truebuild.com/feed.xml
+-->
+<rss version="2.0">
+  <channel>
+    <title>TrueBuild Business Credit</title>
+    <link>https://info.truebuild.com</link>
+    <description>Business credit building resources and program updates from TrueBuild Business Credit.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 May 2026 09:25:00 +0000</lastBuildDate>
+    <item>
+      <title>Welcome to TrueBuild Business Credit</title>
+      <link>https://info.truebuild.com</link>
+      <description>TrueBuild has helped over 48,000 small businesses build corporate credit since 2001. Start your free business credit analysis today.</description>
+      <pubDate>Wed, 13 May 2026 09:25:00 +0000</pubDate>
+      <guid>https://info.truebuild.com#welcome-2026</guid>
+    </item>
+  </channel>
+</rss>
