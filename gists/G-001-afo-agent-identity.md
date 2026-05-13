@@ -18,7 +18,7 @@ status: live-test-ready
 
 ---
 
-## 17-Field Intake Schema
+## 18-Field Intake Schema
 
 All inputs required before generation begins. Required fields must be present; optional fields may be omitted.
 
@@ -38,9 +38,10 @@ All inputs required before generation begins. Required fields must be present; o
 | 12 | `positioning_statement` | required | llms.txt, context-cookie.md |
 | 13 | `has_rss` (bool) | required | gates rss.xml generation |
 | 14 | `key_pages` (list) | required | sitemap-agent.xml |
-| 15 | `contact_email` | required | README-install.md |
-| 16 | `target_audience` | required | agent-context.json, llms.txt |
-| 17 | `industry_category` | required | agent-context.json, agent-policy.json |
+| 15 | `contact_email` | required | README-install.md contact section |
+| 16 | `contact_name` | required | README-install.md contact section |
+| 17 | `target_audience` | required | agent-context.json, llms.txt |
+| 18 | `industry_category` | required | agent-context.json, agent-policy.json |
 
 ---
 
@@ -100,3 +101,4 @@ After completing a draft job, G-001 appends one entry to `nothinginfinity/repo-c
 |---------|------|--------|
 | v0.1 | 2026-05-09 | Initial identity card (read-only, demo mode) |
 | v1.1 | 2026-05-13 | Upgraded to draft/staging writer; added 17-field intake schema, 10-file delivery package, behavioral rules, regeneration guard, outbox write spec |
+| v1.1 patch | 2026-05-13 | PATCH-006: added `contact_name` as field 16 (18-field schema); shifted `target_audience` → 17, `industry_category` → 18 |

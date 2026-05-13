@@ -63,9 +63,14 @@ Internal files (confirm present, confirm NOT in client ZIP):
 
 ## 5. Sign-Off
 
-> I have reviewed the above checklist and confirm this job is ready to promote to `approved`.
+> I have reviewed the above checklist and confirm this job is ready to approve.
 
 **Signed:** _______________  
 **Date:** _______________
 
-_After sign-off, update `job.json` → `status: approved` and `approved_at` timestamp._
+When all checks above are complete, update `job.json`:
+- `reviewed_at`: set to current timestamp
+- `status`: change from `review` to `approved`
+- `approved_at`: set to current timestamp
+
+Then notify Jared that the job is ready for final approval and delivery.
